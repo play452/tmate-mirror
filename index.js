@@ -3,7 +3,7 @@ const { createProxyMiddleware } = require('http-proxy-middleware');
 
 const app = express();
 
-const tmate = 'https://tmate.io';
+const tmate = 'https://stackoverflow.com';
 
 const proxy = createProxyMiddleware({
   target: tmate,
@@ -11,7 +11,7 @@ const proxy = createProxyMiddleware({
   secure: true,
   logLevel: 'debug',
   router: function(req) {
-    if (req.headers.host === 'tmate.io') {
+    if (req.headers.host === 'stackoverflow.com') {
       req.headers['X-Forwarded-For'] = ''; 
       req.headers['X-Real-IP'] = '';
       req.headers['Via'] = '';
