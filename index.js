@@ -3,7 +3,7 @@ const { createProxyMiddleware } = require('http-proxy-middleware');
 
 const app = express();
 
-const tmate = 'https://stackoverflow.com';
+const tmate = 'https://moonlightpanel.xyz/';
 
 const proxy = createProxyMiddleware({
   target: tmate,
